@@ -21,9 +21,35 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--start of content-->
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#Navbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Ristorante Con Fusion</a>
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link">About</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <header class="jumbotron">
       <div class="container">
-        <div class="row row-header">
+        <div class="row-header">
           <div class="col-12 col-sm-6">
             <h1>Ristorante con Fusion</h1>
             <p>
@@ -39,13 +65,17 @@
 
     <div class="container">
       <div class="row">
+        <ol class="col-12 breadcrumb">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item active">About Us</li>
+        </ol>
         <div class="col-12">
           <h3>About Us</h3>
           <hr />
         </div>
       </div>
 
-      <div class="row">
+      <div class="row-content">
         <div class="col-xs-12 col-sm-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
           <h2>Our History</h2>
           <p>
@@ -66,7 +96,7 @@
         <div></div>
       </div>
 
-      <div class="row">
+      <div class="row-content">
         <div class="col-12">
           <h2>Corporate Leadership</h2>
           <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
