@@ -8,6 +8,7 @@ module.exports = function (grunt) {
   require("time-grunt")(grunt);
 
   // Automatically load required Grunt tasks
+  //update the jit-grunt configuration for gruntJS pt2
   require("jit-grunt")(grunt, {
     useminPrepare: "grunt-usemin",
   });
@@ -20,7 +21,8 @@ module.exports = function (grunt) {
         },
       },
     },
-
+    
+//perform the copying of files to the dist folder, and cleaning up the dist folder
     copy: {
       html: {
         files: [
@@ -54,6 +56,7 @@ module.exports = function (grunt) {
       },
     },
 
+//configure the imagemin task
     imagemin: {
       dynamic: {
         files: [
@@ -67,6 +70,7 @@ module.exports = function (grunt) {
       },
     },
 
+//update the task configuration
     useminPrepare: {
       foo: {
         dest: "dist",
@@ -180,6 +184,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask("css", ["sass"]);
   grunt.registerTask("default", ["browserSync", "watch"]);
+  
+  //update the Grunt build task 
   grunt.registerTask("build", [
     "clean",
     "copy",
