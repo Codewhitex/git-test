@@ -9,11 +9,13 @@
     />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
+
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
-    <link href="index.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="node_modules/font-awesome/css/font-awesome.min.css"
@@ -22,27 +24,20 @@
       rel="stylesheet"
       href="node_modules/bootstrap-social/bootstrap-social.css"
     />
+             <!-- endbuild -->
     <title>Ristorante Con Fusion</title>
   </head>
 
   <body>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+     <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+        <!-- endbuild -->
+
      
-    <script>
-        $(document).ready(function(){
-            $("#mycarousel").carousel( { interval: 5000 } );
-            $("#carousel-pause").click(function(){
-                $("#mycarousel").carousel('pause');
-            });
-            $("#carousel-play").click(function(){
-                $("#mycarousel").carousel('cycle');
-            });
-        });
-    </script>
-    
     <!--start of content-->
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
       <div class="container">
@@ -83,7 +78,7 @@
           </ul>
 
           <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginLink">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
 
@@ -144,8 +139,8 @@
                       <div class="col-12 col-sm align-self-center">
              <button type="submit" class="btn-sm btn-warning col-9">
                   <a role="button" class="btn btn-block nav-link btn-warning"
-                       title="Or Call us at  <br><strong>+852 12345678</strong>"
-                        data-placement="bottom" data-toggle="modal" data-target="#reserveModal">
+                       title="Or Call us at  <br> <strong>+852 12345678</strong>"
+                        data-placement="bottom" id="reserveLink">
                     Reserve Table</a>       </button>
           </div>
    
@@ -299,31 +294,19 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
-                    
-                      <div class="btn-group" id="carouselButton">
-                    <button class="btn btn-danger btn-sm" id="carousel-pause">
-                	    <span class="fa fa-pause"></span>
+
+                        <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span id="carousel-button-icon" class="fa fa-pause"></span>
                     </button>
-                    <button class="btn btn-danger btn-sm" id="carousel-play">
-                	    <span class="fa fa-play"></span>
-                    </button>
-                </div>
+                
             </div>
        </div>
      </div>
-  
+    </div>
 
-
-  </div>
-  </div>
-
-  </div>
 
 <div class="container">
-   
-
-
-
+ 
       <div class="row row-content align-items-center">
         <div class="col-12 col-sm-4 order-sm-last col-md-3">
           <h3>Our Lipsmacking Culinary Creations</h3>
